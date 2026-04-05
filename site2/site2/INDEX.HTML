@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazine de Chocolat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Magazine de Chocolat</h1>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Recettes</a>
+        <a href="#">Produits</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<p class="fomo-banner">Seulement 24h pour découvrir nos recettes exclusives ! 🍫</p>
+
+<section class="hero">
+    <h2 class="italic-text">Découvrez le monde du chocolat</h2>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <img src="chocolat1.jpg" alt="Chocolat Noir">
+        <h3>Chocolat Noir</h3>
+        <p>Intense et délicieux, parfait pour les amateurs de cacao.</p>
+        <a href="chocolat-noir.html"><button>Découvrir avant tout le monde !</button></a>
+    </div>
+
+    <div class="card">
+        <img src="chocolat2.jpg" alt="Chocolat au Lait">
+        <h3>Chocolat au Lait</h3>
+        <p>Doux et crémeux, idéal pour les gourmands.</p>
+        <a href="chocolat-au lait.html"><button>Découvrir avant tout le monde !</button></a>
+    </div>
+
+    <div class="card">
+        <img src="chocolat3.jpg" alt="Chocolat Blanc">
+        <h3>Chocolat Blanc</h3>
+        <p>Fondant et subtil, une expérience unique.</p>
+        <a href="chocolat-blanc.htm"><button>Découvrir avant tout le monde !</button></a>
+    </div>
+</section>
+
+<p id="countdown">Offre spéciale se termine dans 24:00:00</p>
+
+<footer>
+    <p>Email: contact@chocolat.com</p>
+    <p>© 2026 Magazine de Chocolat</p>
+</footer>
+
+<script>
+let countdown = document.getElementById("countdown");
+let time = 24*60*60; 
+setInterval(() => {
+    let h = Math.floor(time/3600);
+    let m = Math.floor((time%3600)/60);
+    let s = time%60;
+    countdown.textContent = `Offre spéciale se termine dans ${h}:${m}:${s}`;
+    time--;
+}, 1000);
+</script>
+
+</body>
+</html>
